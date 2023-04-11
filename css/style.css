@@ -109,10 +109,6 @@ nav{
     padding-top: 10px;
 }
 
-
-
-
-
 /* corpo centrale */
 main{
     width: calc(100% - 300px);
@@ -123,7 +119,7 @@ main{
 
 header{
     height: 80px;
-    background-color: #080B12;
+    background-color: #080B12A3;
     position: fixed;
     top: 0;
     left: 300px;
@@ -142,6 +138,100 @@ header{
     background-color: rgba(0, 0, 0, 0);
     border-radius: 20px;
 }
+
+section{
+    margin: 20px;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 14px;
+}
+
+/* main menu */
+.main-menu{
+    margin-top: 100px;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 14px;
+}
+
+.list-main-menu{
+    display: flex;
+    list-style-type: none;
+    width: 60%;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.list-main-menu a{
+    color: white;
+    text-decoration: none;
+}
+
+.list-main-menu a:hover{
+    text-decoration: underline;
+}
+
+/* sezione recently */
+.recently-section{
+    border: 1px solid red;
+}
+
+.row{
+    border: 1px solid white;
+    min-height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.col{
+    min-height: 100px;
+    width: calc(100% / 6 - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.row .col img{
+    width: 100%;
+    display: block;
+}
+
+.sub-text{
+    color: grey;
+    margin-top: 5px;
+}
+
+.img-col{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.play-hover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.play-hover i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.img-col:hover .play-hover{
+    display: block;
+}
+
+
+
+
+
 
 /* sezione player */
 footer{
