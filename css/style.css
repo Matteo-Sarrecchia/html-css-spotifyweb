@@ -14,7 +14,104 @@ nav{
     width: 300px;
     height: 100%;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 20px;
 }
+
+/* menu */
+.menu{
+    min-height: 100px;
+    color: white;
+    padding-left: 5px;
+}
+
+/* logo */
+#logo{
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+#logo a img{
+    height: 100%;
+}
+
+/* list search */
+.menu .list{
+    list-style-type: none;
+}
+
+.menu .list li{
+    padding-bottom: 5px;
+}
+
+.menu .list a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.list.search img{
+    height: 20px;
+    display: block;
+}
+
+.menu .list span{
+   padding-left: 5px;
+   font-size: 14px;
+}
+
+.menu a:hover, #add-play span:hover{
+    text-decoration: underline;
+}
+
+/* playlist */
+.menu h4{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#add-play{
+    text-decoration: none;
+}
+
+#add-play i{
+    background-color: grey;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#add-play span{
+    color: white;
+    padding-left: 5px;
+}
+
+.list.playlist li{
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* profilo */
+.profilo{
+    background-color: black;
+    color: white;
+    min-height: 80px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 20px;
+}
+
+#user{
+    margin-top: 10px;
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+
+
+
+
 
 /* corpo centrale */
 main{
@@ -25,17 +122,34 @@ main{
 }
 
 header{
-    height: 50px;
+    height: 80px;
     background-color: #080B12;
     position: fixed;
     top: 0;
     left: 300px;
-    width: 100%;
+    width: calc(100% - 300px);
     z-index: 900;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#button-upgrade{
+    margin-right: 20px;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
 }
 
 /* sezione player */
 footer{
     height: 80px;
+    width: 100%;
     background-color: #282828;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 899;
 }
