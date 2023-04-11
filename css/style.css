@@ -94,7 +94,7 @@ nav{
 }
 
 /* profilo */
-.profilo{
+#profilo{
     background-color: black;
     color: white;
     min-height: 80px;
@@ -107,6 +107,16 @@ nav{
     margin-top: 10px;
     border-top: 1px solid white;
     padding-top: 10px;
+}
+
+#profilo a, #user a{
+    color: grey;
+    text-decoration: none;
+}
+
+#profilo a:hover, #user a:hover{
+    color: white;
+    text-decoration: underline;
 }
 
 /* corpo centrale */
@@ -185,7 +195,7 @@ section{
 }
 
 .col{
-    min-height: 100px;
+    min-height: 50px;
     width: calc(100% / 6 - 20px);
     margin: 10px;
     text-align: center;
@@ -238,8 +248,73 @@ footer{
     height: 80px;
     width: 100%;
     background-color: #282828;
+    color: white;
     position: fixed;
     left: 0;
     bottom: 0;
     z-index: 899;
+    display: flex;
+}
+
+.col.left{
+text-align: left;
+}
+
+.col.right{
+  
+}
+
+.col.center{
+    width: 64%;
+}
+
+.col.left, .col.right{
+    width: 18%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col.left img{
+    width: 50px;
+}
+
+.col.left i{
+    margin-left: 5px;
+}
+
+.footer-text{
+    padding-right: 30px;
+}
+
+.keys{
+    width: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.center-volume{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-volume span{
+    padding: 0 30px;
+}
+
+.volume{
+    width: 65%;
+    height: 3px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+.sub-volume{
+    width: 30%;
+    height: 3px;
+    background-color: #ada8a8;
+    border-radius: 20px;
 }
