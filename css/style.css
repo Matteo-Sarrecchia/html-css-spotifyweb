@@ -11,7 +11,7 @@
 
 /* menu navigazione */
 nav{
-    width: 300px;
+    width: 200px;
     height: 100%;
     background-color: black;
     display: flex;
@@ -114,14 +114,14 @@ nav{
     text-decoration: none;
 }
 
-#profilo a:hover, #user a:hover{
+#profilo a:hover{
     color: white;
     text-decoration: underline;
 }
 
 /* corpo centrale */
 main{
-    width: calc(100% - 300px);
+    width: calc(100% - 200px);
     height: 100%;
     background-color: #141922;
     overflow: auto;
@@ -132,8 +132,8 @@ header{
     background-color: #080B12A3;
     position: fixed;
     top: 0;
-    left: 300px;
-    width: calc(100% - 300px);
+    left: 200px;
+    width: calc(100% - 200px);
     z-index: 900;
     display: flex;
     justify-content: flex-end;
@@ -152,6 +152,8 @@ header{
 
 #button-upgrade:hover{
     background-color: grey;
+    transform: scale(1.2);
+    margin-right: 50px;
 }
 
 section{
@@ -243,6 +245,7 @@ section{
     border-radius: 50%;
 }
 
+/* footer */
 /* sezione player */
 footer{
     height: 80px;
@@ -284,6 +287,7 @@ text-align: left;
 }
 
 .footer-text{
+    padding-left: 10px;
     padding-right: 30px;
 }
 
@@ -302,7 +306,7 @@ text-align: left;
 }
 
 .center-volume span{
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .volume{
@@ -317,4 +321,142 @@ text-align: left;
     height: 3px;
     background-color: #ada8a8;
     border-radius: 20px;
+}
+
+
+/* responsive query */
+
+@media screen and (max-width:768px) {
+    .list-main-menu{
+        width: 100%;
+        font-size: 0.7rem;
+    }
+
+    .col {
+        width: calc(100% / 4 - 20px);
+    }
+
+    .col.left, .col.right{
+        width: 38%;
+    }
+
+    .footer-text {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 0.7rem;
+      }
+
+      .keys{
+        width: 40%;
+      }
+
+    .col.right a{
+        padding-right: 10px;
+    }
+    
+}
+
+@media all and (max-width: 576px) {
+    section{
+        margin-bottom: 0;
+    }
+
+    .main-menu{
+        padding-bottom: 0;
+    }
+
+    .list-main-menu{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .list-main-menu li{
+        padding-bottom: 20px;
+    }
+
+    .col{
+        width: calc(100% / 2 - 20px);
+    }
+
+    footer{
+        font-size: 0.7rem;
+    }
+
+    .footer-text{
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width:368px) {
+    nav{
+        width: 50px;
+        padding-left: 0;
+    }
+
+    main {
+        width: calc(100% - 50px);
+    }
+
+    header {
+        left: 50px;
+        width: calc(100% - 50px);
+    }
+
+    #button-upgrade{
+        scale: 0.8;
+        margin-right: 0;
+    }
+
+    .menu .list span, .menu h4, #add-play, .menu .list.playlist{
+        display: none;
+    }
+
+    .list.search img{
+        margin-left: 10px;
+    }
+
+    #profilo span{
+        display: none;
+    }
+
+    #profilo a, #user a{
+        margin-left: 10px;
+    }
+
+    #user {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .col.left, .col.right {
+        width: 25%;
+        margin: 10px 5px;
+    }
+
+    .footer-text {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .col.center {
+        margin: 10px 0;
+      }
+
+      .col.left img{
+        display: none;
+      }
+
+      .keys {
+        width: 60%;
+      }
+
+      .center-volume span {
+        padding: 0 5px;
+      }
+
+      .col.right a{
+        font-size: 0.5rem;
+        padding-right: 5px;
+      }
 }
