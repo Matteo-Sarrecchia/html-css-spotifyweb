@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container{
@@ -23,9 +25,11 @@ nav{
 
 /* menu */
 .menu{
-    min-height: 100px;
+    height: 100%;
     color: white;
     padding-left: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* logo */
@@ -49,7 +53,7 @@ nav{
 
 .menu .list a{
     text-decoration: none;
-    color: white;
+    color: grey;
     display: flex;
 }
 
@@ -64,7 +68,7 @@ nav{
 }
 
 .menu a:hover, #add-play span:hover{
-    text-decoration: underline;
+    color: white;
 }
 
 /* playlist */
@@ -84,8 +88,13 @@ nav{
 }
 
 #add-play span{
-    color: white;
+    color: grey;
     padding-left: 5px;
+}
+
+.list.playlist{
+    flex-grow: 1;
+    overflow: auto;
 }
 
 .list.playlist li{
@@ -116,7 +125,6 @@ nav{
 
 #profilo a:hover{
     color: white;
-    text-decoration: underline;
 }
 
 /* corpo centrale */
@@ -180,13 +188,19 @@ section{
 }
 
 .list-main-menu a{
-    color: white;
+    color: grey;
     text-decoration: none;
 }
 
 .list-main-menu a:hover{
-    text-decoration: underline;
+    color: white;
 }
+
+.list-main-menu a:active {
+    border-bottom: 2px solid green;
+    padding-bottom: 5px;
+    border-bottom: 20%;
+  }
 
 /* sezione recently */
 .row{
@@ -289,6 +303,11 @@ text-align: left;
 .footer-text{
     padding-left: 10px;
     padding-right: 30px;
+    font-size: 14px;
+}
+
+.grey{
+    color: grey;
 }
 
 .keys{
@@ -297,6 +316,10 @@ text-align: left;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+}
+
+.keys a:hover, .col.right a:hover{
+    scale: 1.4;
 }
 
 .center-volume{
@@ -311,18 +334,32 @@ text-align: left;
 
 .volume{
     width: 65%;
-    height: 3px;
+    height: 4px;
     background-color: grey;
     border-radius: 20px;
 }
 
 .sub-volume{
     width: 30%;
-    height: 3px;
+    height: 4px;
     background-color: #ada8a8;
     border-radius: 20px;
 }
 
+.sub-volume i{
+    position: absolute;
+    top: 62px;
+    left: 640px;
+    display: none;
+}
+
+.sub-volume:hover{
+    background-color: rgb(43, 97, 13);
+}
+
+.sub-volume i:hover{
+    display: block;
+}
 
 /* responsive query */
 
